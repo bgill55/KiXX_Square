@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your KiXX Square order and proceed to secure checkout. Free shipping, 30-day money-back guarantee, made in USA.">
+    <title>Shopping Cart - KiXX Square</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Stripe.js - Include this to enable Stripe checkout -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <a href="index.html" class="brand-link">
+                        <img src="images/branding/Kixx_Logo_250219_071446_2.png" alt="KiXX Square Logo" class="header-logo">
+                        <span class="brand-name">KiXX Square</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-to.html">How-To</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html" class="btn-cart active">Cart (<span id="cartCount">0</span>)</a></li>
+                    <li><button class="more-btn" id="moreMenuBtn">More</button></li>
+                </ul>
+
+                <div class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slide-out Drawer Menu -->
+        <div class="drawer-menu" id="drawerMenu">
+            <div class="drawer-content">
+                <button class="drawer-close" id="drawerClose">&times;</button>
+                <h3>More</h3>
+                <ul class="drawer-links">
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="drawer-footer">
+                    <p>Built by professionals, for professionals</p>
+                </div>
+            </div>
+        </div>
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="container">
+                <div id="cartEmpty" class="cart-empty">
+                    <h2>Your cart is empty</h2>
+                    <p>Add a KiXX Square to your cart to get started.</p>
+                    <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                </div>
+
+                <div id="cartContent" class="cart-content" style="display: none;">
+                    <div class="cart-items">
+                        <h2>Items in Your Cart</h2>
+                        <div id="cartItemsList"></div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping">FREE</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (estimated):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+                        <div class="trust-badges">
+                            <div class="trust-badge">
+                                <i class="fa-solid fa-shield-halved badge-icon"></i>
+                                <span class="badge-text">Secure Checkout</span>
+                            </div>
+                            <div class="trust-badge">
+                                <i class="fa-solid fa-rotate-left badge-icon"></i>
+                                <span class="badge-text">30-Day Guarantee</span>
+                            </div>
+                            <div class="trust-badge">
+                                <i class="fa-solid fa-flag-usa badge-icon"></i>
+                                <span class="badge-text">Made in USA</span>
+                            </div>
+                            <div class="trust-badge">
+                                <i class="fa-solid fa-truck-fast badge-icon"></i>
+                                <span class="badge-text">Free Shipping</span>
+                            </div>
+                        </div>
+
+                        <a href="index.html" class="btn btn-secondary">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KiXX Square</h3>
+                    <p>Professional carpenter's tool engineered for precision and speed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-to.html">How-To Guides</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@kixxsquare.com</p>
+                    <p>Launch: November 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61583236334695" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/@kixxsquare6513" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KiXX Square. All rights reserved. | Patented | Made in USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

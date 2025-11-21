@@ -1,0 +1,11 @@
+# robots.txt for KiXX Square
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kixxsquare.com/sitemap.xml
+
+# Disallow admin/backend pages if any
+Disallow: /netlify/
+Disallow: /.netlify/

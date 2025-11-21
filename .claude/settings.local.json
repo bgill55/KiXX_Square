@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file in contact.html cart.html success.html privacy-policy.html terms-conditions.html shipping-policy.html return-policy.html)",
+      "Bash(do head -38 \"$file\")",
+      "Bash(echo:*)",
+      "Bash(done)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

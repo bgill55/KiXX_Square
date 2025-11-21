@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful - KiXX Square</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <a href="index.html" class="brand-link">
+                        <img src="images/branding/Kixx_Logo_250219_071446_2.png" alt="KiXX Square Logo" class="header-logo">
+                        <span class="brand-name">KiXX Square</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-to.html">How-To</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html" class="btn-cart">Cart (0)</a></li>
+                    <li><button class="more-btn" id="moreMenuBtn">More</button></li>
+                </ul>
+
+                <div class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slide-out Drawer Menu -->
+        <div class="drawer-menu" id="drawerMenu">
+            <div class="drawer-content">
+                <button class="drawer-close" id="drawerClose">&times;</button>
+                <h3>More</h3>
+                <ul class="drawer-links">
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="drawer-footer">
+                    <p>Built by professionals, for professionals</p>
+                </div>
+            </div>
+        </div>
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+    </header>
+
+    <main>
+        <section class="success-section">
+            <div class="container">
+                <div class="success-card">
+                    <div class="success-icon">✓</div>
+                    <h1>Order Successful!</h1>
+                    <p class="success-message">Thank you for your purchase of the KiXX Square!</p>
+                    
+                    <div class="order-details">
+                        <h2>What's Next?</h2>
+                        <ol class="next-steps">
+                            <li>
+                                <strong>Confirmation Email</strong>
+                                <p>You'll receive an order confirmation email within the next few minutes.</p>
+                            </li>
+                            <li>
+                                <strong>Shipping Notification</strong>
+                                <p>We'll send you tracking information as soon as your KiXX Square ships.</p>
+                            </li>
+                            <li>
+                                <strong>Expected Delivery</strong>
+                                <p>Your order will arrive within 5-7 business days.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="success-actions">
+                        <a href="index.html" class="cta-button-large">Back to Home</a>
+                        <a href="how-to.html" class="cta-button">Learn How to Use Your KiXX Square</a>
+                    </div>
+
+                    <div class="support-info">
+                        <p>Need help? Contact us at <a href="mailto:info@kixxsquare.com">info@kixxsquare.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KiXX Square. All rights reserved. | Patented | Made in USA</p>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@kixxsquare.com</p>
+                <p>Launch: November 2025</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61583236334695" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@kixxsquare6513" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Clear cart after successful purchase
+        localStorage.removeItem('kixxCart');
+        updateCartCount();
+    </script>
+</body>
+</html>

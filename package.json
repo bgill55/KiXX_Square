@@ -1,0 +1,21 @@
+{
+  "name": "kixx-square-website",
+  "version": "1.0.0",
+  "description": "E-commerce website for KiXX Square - Professional Carpenter's Layout Tool",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "carpenter",
+    "construction",
+    "tools",
+    "layout-tool",
+    "ecommerce"
+  ],
+  "author": "KiXX Square",
+  "license": "ISC",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}

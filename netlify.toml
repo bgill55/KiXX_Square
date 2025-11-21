@@ -1,0 +1,22 @@
+# Netlify Configuration File
+
+[build]
+  # Directory to publish (leave blank for root)
+  publish = "."
+  
+  # Command to run before deploying (optional)
+  # command = "npm run build"
+
+[functions]
+  # Directory where your serverless functions are located
+  directory = "netlify/functions"
+
+[[redirects]]
+  # Redirect all 404 errors to the home page (optional)
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (set these in Netlify dashboard instead)
+# STRIPE_SECRET_KEY = your_secret_key_here (DO NOT COMMIT THIS!)
+# URL = https://your-site.netlify.app
