@@ -6,6 +6,7 @@ package-lock.json
 .env
 .env.local
 .env.production
+ docs/
 
 # Netlify
 .netlify/
@@ -21,6 +22,7 @@ desktop.ini
 *.swp
 *.swo
 *~
+.claude/
 
 # Logs
 *.log
