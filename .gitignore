@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables (NEVER COMMIT THESE!)
+.env
+.env.local
+.env.production
+
+# Netlify
+.netlify/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build files (if you add a build process later)
+dist/
+build/
+
+# Media files
+KiXX_media/
